@@ -63,3 +63,19 @@ h2{
 .hub_main_text{
     text-align: center;
 }
+
+#progressBar{
+    width: 20rem;
+    height: 3rem;
+    margin-top: 1.6rem;
+    border-radius: 20px;
+    border: 0.2rem solid #015aa8;
+    
+}
+#progressBarfull{
+    height: 2.6rem;
+    background:linear-gradient(90deg ,#03e2ff,#015aa8 );
+    width: 0%;
+    border-radius: 20px;
+
+}
