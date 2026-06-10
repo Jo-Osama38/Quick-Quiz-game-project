@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Gongrats!</title>
+    <link rel="stylesheet" href="app.css">
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+    
+    <div class="container">
+         <div id="end" class="flex-center flex-column">
+            <h1 id="saveText">Save Your Score</h1>
+            <h1 id ="finalScore"></h1>
+            <form >
+                <input type="text" name="username" id="username" placeholder="User Name">
+                <button type="submit" id="saveScoreBtn" onclick="saveHighScore(event)" disabled><i class="bi bi-send-fill"></i></button>
+            </form>
+            <h1 class="or">OR</h1>
+            <a class="btn" id="restart" href="game.html">Play Again</a>
+            <a class="btn" href="index.html">Go Home</a> 
+
+         </div>
+    </div>
+    
+
+    <script src="end.js"></script>
+</body>
+</html>
