@@ -37,3 +37,23 @@ link :  https://jo-osama38.github.io/Quick-Quiz-/
 ### لينك لتجربه اللعبه
 
  لينك : https://jo-osama38.github.io/Quick-Quiz-/ 
+
+
+
+#
+#
+# Image
+
+![](home.png)
+
+#
+
+![](gamepage.png)
+![](gamepage2.png)
+
+#
+### save your score here
+![](savescore.png)
+#
+### High Scores 
+![](highscore.png)
