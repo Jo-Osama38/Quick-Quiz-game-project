@@ -17,8 +17,9 @@ saveHighScore = e => {
     e.preventDefault();
 
     const score = {
-        score: finalScore,
-        name: username.value
+        score: Number(mostRecentScore),
+        name: username.value,
+        questions : localStorage.getItem("questionsPlayed")
     };
     
     highScores.push(score);
