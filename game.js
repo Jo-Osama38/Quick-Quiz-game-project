@@ -16,6 +16,12 @@ let availableQuesions = [];
 
 let questions = [];
 
+function decodeHTML(text){
+    const texter = document.createElement("textarea")
+    texter.innerHTML= text;
+    return texter.value
+}
+
 fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=multiple")
     .then(res => {
         return res.json();
@@ -24,11 +30,11 @@ fetch("https://opentdb.com/api.php?amount=10&category=9&difficulty=medium&type=m
         console.log(loadedQuestions.results);
         questions = loadedQuestions.results.map(loadedQuestions=>{
             const formattedQuestion={
-                question : loadedQuestions.question
+                question : decodeHTML(loadedQuestions.question)
             };
-            const answerChoices= [...loadedQuestions.incorrect_answers];
+            const answerChoices= loadedQuestions.incorrect_answers.map(answer=> decodeHTML(answer));
             formattedQuestion.answer = Math.floor(Math.random()*3)+1;
-            answerChoices.splice(formattedQuestion.answer -1 , 0 , loadedQuestions.correct_answer);
+            answerChoices.splice(formattedQuestion.answer -1 , 0 , decodeHTMLz(loadedQuestions.correct_answer));
 
             answerChoices.forEach((choice , index) => {
                 formattedQuestion["choice" + (index + 1)] = choice;
